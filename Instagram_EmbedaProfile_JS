@@ -1,0 +1,32 @@
+<html>
+<div id="images"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var accessToken = 'YOUR_ACCESS_TOKEN';
+    var username = 'dimism.eu';
+    var url = 'https://api.instagram.com/v1/users/search?q=' + username + '&access_token=' + accessToken;
+
+    $.ajax({
+      url: url,
+      dataType: 'jsonp',
+      success: function(data) {
+        var userId = data.data[0].id;
+        var mediaUrl = 'https://api.instagram.com/v1/users/' + userId + '/media/recent?access_token=' + accessToken;
+
+        $.ajax({
+          url: mediaUrl,
+          dataType: 'jsonp',
+          success: function(data) {
+            var images = data.data.slice(0, 9);
+            images.forEach(function(image) {
+              $('#images').append("<img src='" + image.images.thumbnail.url + "' />");
+            });
+          }
+        });
+      }
+    });
+  });
+</script>
+</html>
