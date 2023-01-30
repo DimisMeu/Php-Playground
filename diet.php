@@ -12,13 +12,13 @@
 
   echo "7-Day 2000 Calorie Meal Plan:\n";
   for ($i = 1; $i <= $days; $i++) {
-    echo "\nDay $i:\n";
-    echo "Breakfast: " . $breakfast[array_rand($breakfast)] . " (400 calories)\n";
-    echo "Lunch: " . $lunch[array_rand($lunch)] . " (400 calories)\n";
-    echo "Snack: " . $snack[array_rand($snack)] . " (100 calories)\n";
-    echo "Dinner: " . $dinner[array_rand($dinner)] . " (400 calories)\n";
-    echo "Dessert: " . $dessert[array_rand($dessert)] . " (100 calories)\n";
+    echo "<br>Day $i:<br>";
+    echo "Breakfast: " . $breakfast[array_rand($breakfast)] . " (400 calories)<br>";
+    echo "Lunch: " . $lunch[array_rand($lunch)] . " (400 calories)<br>";
+    echo "Snack: " . $snack[array_rand($snack)] . " (100 calories)<br>";
+    echo "Dinner: " . $dinner[array_rand($dinner)] . " (400 calories)<br>";
+    echo "Dessert: " . $dessert[array_rand($dessert)] . " (100 calories)<br>";
   }
-  echo "\nTotal calories for the week: $totalCalories<br/>";
+  echo "<br>Total calories for the week: $totalCalories\n";
   echo "Enjoy your healthy meals!";
 ?>
