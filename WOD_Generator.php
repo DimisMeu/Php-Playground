@@ -8,8 +8,8 @@
   echo $types[0]. " | Complete ".$rounds." rounds of:<br/>";
   for ($i = 1; $i <= $rounds; $i++) {
     shuffle($movements);
-    $reps = rand(10, 18);
-	echo $i.") ".$reps." (reps &plusmn; 2) " .$movements[0]. "<br/>";
+    $reps = rand(8, 18);
+	echo $i.") ".$reps." (reps &plus; 2) " .$movements[0]. "<br/>";
   }
   echo "Have a great workout!";
 
